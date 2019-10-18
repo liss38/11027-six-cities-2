@@ -9,7 +9,14 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  placesList: PropTypes.array
+  placesList: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    type: PropTypes.string,
+    previewImage: PropTypes.string,
+    price: PropTypes.number,
+    rating: PropTypes.number,
+    isPremium: PropTypes.bool,
+  })),
 };
 
 export default App;

@@ -4,14 +4,14 @@ import PlaceCard from './place-card/place-card.jsx';
 
 const Main = (props) => {
   const placeList = props.placesList.map((place) => <PlaceCard
-    key={place.id + place.name}
-    name={place.name}
+    key={place.id + place.title}
+    title={place.title}
     type={place.type}
-    image={place.image}
-    priceValue={place.priceValue}
-    priceText={place.priceText}
+    previewImage={place.previewImage}
+    price={place.price}
     rating={place.rating}
-    mark={place.mark}
+    isPremium={place.isPremium}
+    isFavorite={place.isFavorite}
   />);
 
   return (
@@ -87,7 +87,14 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  placesList: PropTypes.array
+  placesList: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    type: PropTypes.string,
+    previewImage: PropTypes.string,
+    price: PropTypes.number,
+    rating: PropTypes.number,
+    isPremium: PropTypes.bool,
+  })),
 };
 
 export default Main;
