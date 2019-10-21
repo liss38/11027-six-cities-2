@@ -11,12 +11,12 @@ const App = (props) => {
 App.propTypes = {
   placesList: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
-    type: PropTypes.string,
+    type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
     rating: PropTypes.number,
     isPremium: PropTypes.bool,
-  })),
+  })).isRequired,
 };
 
 export default App;

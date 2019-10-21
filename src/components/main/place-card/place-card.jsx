@@ -46,7 +46,7 @@ const PlaceCard = (props) => {
 
 PlaceCard.propTypes = {
   title: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
   previewImage: PropTypes.string,
   price: PropTypes.number,
   rating: PropTypes.number,
