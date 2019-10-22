@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import Main from '../main/main.jsx';
 
 const App = (props) => {
+  const showOffer = () => {};
+
   return <Main
     placesList={props.placesList}
+    onPlaceCardClick={showOffer}
   />;
 };
 
