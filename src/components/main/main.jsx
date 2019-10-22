@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlaceCard from './place-card/place-card.jsx';
+import PlaceCard from '../place-card/place-card.jsx';
 
 const Main = (props) => {
-  const showOffer = () => {};
-
+  const {onPlaceCardClick} = props;
   const placeList = props.placesList.map((place) => {
     const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = place;
 
@@ -18,7 +17,7 @@ const Main = (props) => {
         rating={rating}
         isPremium={isPremium}
         isFavorite={isFavorite}
-        onPlaceCardClick={showOffer}
+        onPlaceCardClick={onPlaceCardClick}
       />
     );
   });
@@ -103,8 +102,8 @@ Main.propTypes = {
     price: PropTypes.number,
     rating: PropTypes.number,
     isPremium: PropTypes.bool,
-    onPlaceCardClick: PropTypes.func,
   })).isRequired,
+  onPlaceCardClick: PropTypes.func,
 };
 
 export default Main;

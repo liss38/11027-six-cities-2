@@ -179,7 +179,6 @@ exports[`Components Main renders correctly 1`] = `
             >
               <a
                 href="#"
-                onClick={[Function]}
               >
                 <img
                   alt="Place image"
@@ -252,7 +251,6 @@ exports[`Components Main renders correctly 1`] = `
               >
                 <a
                   href="#"
-                  onClick={[Function]}
                 >
                   Beautiful &amp; luxurious apartment at great location
                 </a>
@@ -272,7 +270,6 @@ exports[`Components Main renders correctly 1`] = `
             >
               <a
                 href="#"
-                onClick={[Function]}
               >
                 <img
                   alt="Place image"
@@ -345,7 +342,6 @@ exports[`Components Main renders correctly 1`] = `
               >
                 <a
                   href="#"
-                  onClick={[Function]}
                 >
                   Wood and stone place
                 </a>
@@ -365,7 +361,6 @@ exports[`Components Main renders correctly 1`] = `
             >
               <a
                 href="#"
-                onClick={[Function]}
               >
                 <img
                   alt="Place image"
@@ -438,7 +433,6 @@ exports[`Components Main renders correctly 1`] = `
               >
                 <a
                   href="#"
-                  onClick={[Function]}
                 >
                   Canal View Prinsengracht
                 </a>
@@ -458,7 +452,6 @@ exports[`Components Main renders correctly 1`] = `
             >
               <a
                 href="#"
-                onClick={[Function]}
               >
                 <img
                   alt="Place image"
@@ -531,7 +524,6 @@ exports[`Components Main renders correctly 1`] = `
               >
                 <a
                   href="#"
-                  onClick={[Function]}
                 >
                   Nice, cozy, warm big bed apartment
                 </a>
@@ -551,7 +543,6 @@ exports[`Components Main renders correctly 1`] = `
             >
               <a
                 href="#"
-                onClick={[Function]}
               >
                 <img
                   alt="Place image"
@@ -624,7 +615,6 @@ exports[`Components Main renders correctly 1`] = `
               >
                 <a
                   href="#"
-                  onClick={[Function]}
                 >
                   Wood and stone place
                 </a>
