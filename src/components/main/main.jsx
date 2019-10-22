@@ -3,16 +3,25 @@ import PropTypes from 'prop-types';
 import PlaceCard from './place-card/place-card.jsx';
 
 const Main = (props) => {
-  const placeList = props.placesList.map((place) => <PlaceCard
-    key={place.id + place.title}
-    title={place.title}
-    type={place.type}
-    previewImage={place.previewImage}
-    price={place.price}
-    rating={place.rating}
-    isPremium={place.isPremium}
-    isFavorite={place.isFavorite}
-  />);
+  const showOffer = () => {};
+
+  const placeList = props.placesList.map((place) => {
+    const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = place;
+
+    return (
+      <PlaceCard
+        key={id + title}
+        title={title}
+        type={type}
+        previewImage={previewImage}
+        price={price}
+        rating={rating}
+        isPremium={isPremium}
+        isFavorite={isFavorite}
+        onPlaceCardClick={showOffer}
+      />
+    );
+  });
 
   return (
     <main className="page__main page__main--index">
@@ -94,6 +103,7 @@ Main.propTypes = {
     price: PropTypes.number,
     rating: PropTypes.number,
     isPremium: PropTypes.bool,
+    onPlaceCardClick: PropTypes.func,
   })).isRequired,
 };
 
