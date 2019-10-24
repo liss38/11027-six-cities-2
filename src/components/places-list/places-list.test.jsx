@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './app.jsx';
+import PlacesList from './places-list.jsx';
 
-it(`Components App renders correctly`, () => {
+it(`PlacesList rendered correctly`, () => {
   const tree = renderer
-    .create(<App
+    .create(<PlacesList
       offers={[
         {
           title: `Beautiful &amp; luxurious apartment at great location`,
@@ -25,14 +25,7 @@ it(`Components App renders correctly`, () => {
           isFavorite: false,
         },
       ]}
-      cities={[
-        {
-          name: `New-York`,
-        },
-        {
-          name: `Tokyo`,
-        },
-      ]}
+      onPlaceCardClick={jest.fn()}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
