@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PlaceCard = (props) => {
-  const {title, type, previewImage, price, rating, isPremium, onPlaceCardClick} = props;
+const PlaceItem = (props) => {
+  const {title, type, previewImage, price, rating, isPremium, onPlaceCardClick, onPlaceCardHover} = props;
+
+  const handlePlaceCardMouseOver = () => {
+    onPlaceCardHover({title, type, previewImage, price, rating, isPremium});
+  };
 
   return (
-    <article className="cities__place-card place-card">
+    <article className="cities__place-card place-card" onMouseOver={handlePlaceCardMouseOver}>
       {isPremium &&
         <div className="place-card__mark">
           <span>Premium</span>
@@ -44,14 +48,15 @@ const PlaceCard = (props) => {
   );
 };
 
-PlaceCard.propTypes = {
+PlaceItem.propTypes = {
   title: PropTypes.string,
   type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
   previewImage: PropTypes.string,
   price: PropTypes.number,
   rating: PropTypes.number,
   isPremium: PropTypes.bool,
-  onPlaceCardClick: PropTypes.func,
+  onPlaceCardClick: PropTypes.func.isRequired,
+  onPlaceCardHover: PropTypes.func.isRequired,
 };
 
-export default PlaceCard;
+export default PlaceItem;

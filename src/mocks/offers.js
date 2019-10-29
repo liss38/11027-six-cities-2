@@ -1,4 +1,4 @@
-const placesList = [
+const offers = [
   {
     "id": 1,
     "title": `Beautiful &amp; luxurious apartment at great location`,
@@ -51,4 +51,4 @@ const placesList = [
   },
 ];
 
-export default placesList;
+export default offers;

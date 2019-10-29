@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PlaceCard from './place-card.jsx';
+import PlaceItem from './place-item.jsx';
 
 it(`Componnets PlaceCard renders correctly`, () => {
   const tree = renderer
-    .create(<PlaceCard
+    .create(<PlaceItem
       title={`Beautiful &amp; luxurious apartment at great location`}
       type={`apartment`}
       previewImage={`img/apartment-01.jpg`}
@@ -12,6 +12,8 @@ it(`Componnets PlaceCard renders correctly`, () => {
       rating={4.2}
       isPremium={true}
       isFavorite={false}
+      onPlaceCardClick={jest.fn()}
+      onPlaceCardHover={jest.fn()}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
