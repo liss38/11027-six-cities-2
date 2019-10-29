@@ -16,7 +16,9 @@ const Main = (props) => {
       <h1 className="visually-hidden">Cities</h1>
       <TabsList
         cities={cities}
-        current={`Amsterdam`}
+        activeCity={{
+          name: `Amsterdam`,
+        }}
       />
       <div className="cities">
         <div className="cities__places-container container">
@@ -49,7 +51,7 @@ Main.propTypes = {
   })).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-  })),
+  })).isRequired,
   onPlaceCardClick: PropTypes.func,
 };
 

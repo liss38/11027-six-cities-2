@@ -7,6 +7,7 @@ configure({adapter: new Adapter()});
 
 it(`Place card on image click`, () => {
   const onPlaceCardClick = jest.fn();
+  const onPlaceCardHover = jest.fn();
   const placeItem = shallow(<PlaceItem
     title={`Beautiful &amp; luxurious apartment at great location`}
     type={`apartment`}
@@ -16,6 +17,7 @@ it(`Place card on image click`, () => {
     isPremium={true}
     isFavorite={false}
     onPlaceCardClick={onPlaceCardClick}
+    onPlaceCardHover={onPlaceCardHover}
   />);
 
   const placeItemImage = placeItem.find(`.place-card__image-wrapper > a`);
@@ -26,6 +28,7 @@ it(`Place card on image click`, () => {
 
 it(`Place card on title click`, () => {
   const onPlaceCardClick = jest.fn();
+  const onPlaceCardHover = jest.fn();
   const placeItem = shallow(<PlaceItem
     title={`Beautiful &amp; luxurious apartment at great location`}
     type={`apartment`}
@@ -35,6 +38,7 @@ it(`Place card on title click`, () => {
     isPremium={true}
     isFavorite={false}
     onPlaceCardClick={onPlaceCardClick}
+    onPlaceCardHover={onPlaceCardHover}
   />);
 
   const placeItemTitle = placeItem.find(`.place-card__name > a`);
@@ -45,6 +49,7 @@ it(`Place card on title click`, () => {
 
 it(`Place card on hover`, () => {
   const onPlaceCardHover = jest.fn();
+  const onPlaceCardClick = jest.fn();
   const placeItem = shallow(<PlaceItem
     title={`Beautiful &amp; luxurious apartment at great location`}
     type={`apartment`}
@@ -53,6 +58,7 @@ it(`Place card on hover`, () => {
     rating={4.2}
     isPremium={true}
     isFavorite={false}
+    onPlaceCardClick={onPlaceCardClick}
     onPlaceCardHover={onPlaceCardHover}
   />);
 

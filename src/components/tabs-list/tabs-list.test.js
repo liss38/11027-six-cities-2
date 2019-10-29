@@ -13,7 +13,9 @@ it(`TabsList rendered correctly`, () => {
           name: `San-Domingo`,
         },
       ]}
-      current={`Moscow`}
+      activeCity={{
+        name: `Moscow`,
+      }}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();

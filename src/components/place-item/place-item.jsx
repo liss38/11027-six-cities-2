@@ -55,8 +55,8 @@ PlaceItem.propTypes = {
   price: PropTypes.number,
   rating: PropTypes.number,
   isPremium: PropTypes.bool,
-  onPlaceCardClick: PropTypes.func,
-  onPlaceCardHover: PropTypes.func,
+  onPlaceCardClick: PropTypes.func.isRequired,
+  onPlaceCardHover: PropTypes.func.isRequired,
 };
 
 export default PlaceItem;

@@ -5,7 +5,7 @@ import TabItem from '../tab-item/tab-item.jsx';
 const TabsList = (props) => {
   const {
     cities,
-    current,
+    activeCity,
   } = props;
   return (
     <div className="tabs">
@@ -15,7 +15,7 @@ const TabsList = (props) => {
             cities.map((city, i) => <TabItem
               key={`${city.name}-${i}`}
               name={city.name}
-              isActive={city.name === current}
+              isActive={city.name === activeCity.name}
             />)
           }
         </ul>
@@ -27,8 +27,10 @@ const TabsList = (props) => {
 TabsList.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-  })),
-  current: PropTypes.string.isRequired,
+  })).isRequired,
+  activeCity: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default TabsList;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PlaceItem from '../place-item/place-item.jsx';
 
-class PlacesList extends React.Component {
+class PlacesList extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,8 +16,8 @@ class PlacesList extends React.Component {
       onPlaceCardClick,
     } = this.props;
 
-    const placesList = offers.map((it) => {
-      const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = it;
+    const mappedOffers = offers.map((offer) => {
+      const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = offer;
 
       return (
         <PlaceItem
@@ -31,8 +31,7 @@ class PlacesList extends React.Component {
           isFavorite={isFavorite}
           onPlaceCardClick={onPlaceCardClick}
           onPlaceCardHover={(placeCard) => {
-            this.setState((prevState) => ({
-              ...prevState,
+            this.setState(() => ({
               activePlaceCard: placeCard,
             }));
           }}
@@ -42,7 +41,7 @@ class PlacesList extends React.Component {
 
     return (
       <div className="cities__places-list places__list tabs__content">
-        {placesList}
+        {mappedOffers}
       </div>
     );
   }

@@ -29,7 +29,7 @@ App.propTypes = {
   })).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-  })),
+  })).isRequired,
 };
 
 export default App;
