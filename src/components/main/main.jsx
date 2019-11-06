@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PlacesList from '../places-list/places-list.jsx';
 import TabsList from '../tabs-list/tabs-list.jsx';
 import PlacesSorting from '../places-sorting/places-sorting.jsx';
+import Map from '../map/map.jsx';
 
 const Main = (props) => {
   const {
@@ -10,6 +11,8 @@ const Main = (props) => {
     cities,
     onPlaceCardClick,
   } = props;
+
+  const locations = offers.map((offer) => [offer.location.latitude, offer.location.longitude]);
 
   return (
     <main className="page__main page__main--index">
@@ -32,7 +35,7 @@ const Main = (props) => {
             />
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"></section>
+            <Map locations={locations}/>
           </div>
         </div>
       </div>
@@ -42,12 +45,25 @@ const Main = (props) => {
 
 Main.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
+    city: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      location: PropTypes.shape({
+        latitude: PropTypes.number.isRequired,
+        longitude: PropTypes.number.isRequired,
+        zoom: PropTypes.number.isRequired,
+      }).isRequired,
+    }).isRequired,
     title: PropTypes.string,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
     rating: PropTypes.number,
     isPremium: PropTypes.bool,
+    location: PropTypes.shape({
+      latitude: PropTypes.number.isRequired,
+      longitude: PropTypes.number.isRequired,
+      zoom: PropTypes.number.isRequired,
+    }).isRequired,
   })).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,

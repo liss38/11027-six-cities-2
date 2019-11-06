@@ -20,12 +20,25 @@ const App = (props) => {
 
 App.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
+    city: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      location: PropTypes.shape({
+        latitude: PropTypes.number.isRequired,
+        longitude: PropTypes.number.isRequired,
+        zoom: PropTypes.number.isRequired,
+      }).isRequired,
+    }).isRequired,
     title: PropTypes.string,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
     rating: PropTypes.number,
     isPremium: PropTypes.bool,
+    location: PropTypes.shape({
+      latitude: PropTypes.number.isRequired,
+      longitude: PropTypes.number.isRequired,
+      zoom: PropTypes.number.isRequired,
+    }).isRequired,
   })).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
