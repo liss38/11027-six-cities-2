@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import leaflet from 'leaflet';
 
 class Map extends PureComponent {
-  render() {
-    return (
-      <section id="map" className="cities__map map"></section>
-    );
-  }
-
   componentDidMount() {
     const {locations} = this.props;
     const city = [52.38333, 4.9];
@@ -33,6 +27,12 @@ class Map extends PureComponent {
       .addTo(map);
 
     locations.forEach((offerCoords) => leaflet.marker(offerCoords, {icon}).addTo(map));
+  }
+
+  render() {
+    return (
+      <section id="map" className="cities__map map"></section>
+    );
   }
 }
 
