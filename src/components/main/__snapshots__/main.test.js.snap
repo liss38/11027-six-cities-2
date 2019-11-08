@@ -122,6 +122,13 @@ exports[`Components Main renders correctly 1`] = `
             onMouseOver={[Function]}
           >
             <div
+              className="place-card__mark"
+            >
+              <span>
+                Premium
+              </span>
+            </div>
+            <div
               className="cities__image-wrapper place-card__image-wrapper"
             >
               <a
@@ -132,6 +139,7 @@ exports[`Components Main renders correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/apartment-01.jpg"
                   width="260"
                 />
               </a>
@@ -225,6 +233,7 @@ exports[`Components Main renders correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/room.jpg"
                   width="260"
                 />
               </a>

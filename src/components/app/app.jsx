@@ -2,23 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/header.jsx';
 import Main from '../main/main.jsx';
+import Offer from '../offer/offer.jsx';
+
+const getPageScreen = (props) => {
+  const {offers} = props;
+  switch (location.pathname) {
+    case `/`: return <Main
+      offers={props.offers}
+      cities={props.cities}
+      onPlaceCardClick={() => {}}
+    />;
+    case `/offer`: return <Offer offer={offers[0]} />;
+  }
+
+  return null;
+};
 
 const App = (props) => {
-  const showOffer = () => {};
-
   return (
     <div className="page">
       <Header />
-      <Main
-        offers={props.offers}
-        cities={props.cities}
-        onPlaceCardClick={showOffer}
-      />
+      {getPageScreen(props)}
     </div>
   );
 };
 
-App.propTypes = {
+getPageScreen.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     city: PropTypes.shape({
       name: PropTypes.string.isRequired,

@@ -17,7 +17,16 @@ class PlacesList extends React.PureComponent {
     } = this.props;
 
     const mappedOffers = offers.map((offer) => {
-      const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = offer;
+      const {
+        id,
+        title,
+        type,
+        previewImage,
+        price,
+        rating,
+        isPremium,
+        isFavorite,
+      } = offer;
 
       return (
         <PlaceItem

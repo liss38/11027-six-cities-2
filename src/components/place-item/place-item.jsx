@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PlaceItem = (props) => {
-  const {title, type, previewImage, price, rating, isPremium, onPlaceCardClick, onPlaceCardHover} = props;
+  const {
+    title,
+    type,
+    previewImage,
+    price,
+    rating,
+    isPremium,
+    onPlaceCardClick,
+    onPlaceCardHover
+  } = props;
 
   const handlePlaceCardMouseOver = () => {
     onPlaceCardHover({title, type, previewImage, price, rating, isPremium});
