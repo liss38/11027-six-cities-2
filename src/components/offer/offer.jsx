@@ -301,7 +301,7 @@ Offer.propTypes = {
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
-    rating: PropTypes.number,
+    rating: PropTypes.number.isRequired,
     isPremium: PropTypes.bool,
     location: PropTypes.shape({
       latitude: PropTypes.number.isRequired,

@@ -25,7 +25,7 @@ const PlaceItem = (props) => {
         </div>
       }
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#" onClick={onPlaceCardClick}>
+        <a href={`/offer`} onClick={onPlaceCardClick}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image" />
         </a>
       </div>
@@ -49,7 +49,7 @@ const PlaceItem = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#" onClick={onPlaceCardClick}>{title}</a>
+          <a href={`/offer`} onClick={onPlaceCardClick}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -62,7 +62,7 @@ PlaceItem.propTypes = {
   type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
   previewImage: PropTypes.string,
   price: PropTypes.number,
-  rating: PropTypes.number,
+  rating: PropTypes.number.isRequired,
   isPremium: PropTypes.bool,
   onPlaceCardClick: PropTypes.func.isRequired,
   onPlaceCardHover: PropTypes.func.isRequired,

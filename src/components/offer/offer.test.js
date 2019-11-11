@@ -6,6 +6,7 @@ it(`Offer component is rendered`, () => {
   const tree = renderer
     .create(<Offer
       offer={{
+        id: 1,
         city: {
           name: `Amsterdam`,
           location: {
@@ -29,13 +30,33 @@ it(`Offer component is rendered`, () => {
         },
         host: {
           id: 3,
-          isPro: true,
+          isSuper: true,
           name: `Angelina`,
           avatarUrl: `img/avatar-angelina.jpg`,
         },
         description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
         goods: [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+        maxAdults: 4,
+        bedrooms: 3,
       }}
+      reviews={[
+        {
+          id: 1,
+          name: `Alex`,
+          avatarUrl: `img/avatar.svg`,
+          rating: 0.9,
+          date: `April 2019`,
+          description: `Рейтинг. Оценка выводится в виде закрашенных звезд. Максимальное количество звёзд — 5. Оценка округляется до ближайшего целого. Например, оценка 3.1 округляется до 3-х. Оценка 4.5 округляется до 5.`,
+        },
+        {
+          id: 2,
+          name: `John`,
+          avatarUrl: `img/avatar.svg`,
+          rating: 5,
+          date: `April 2019`,
+          description: `Дата отзыва в формате: Месяц Год. Например: April 2019`,
+        },
+      ]}
     />)
     .toJSON();
 

@@ -4,12 +4,11 @@ import Header from '../header/header.jsx';
 import Main from '../main/main.jsx';
 import Offer from '../offer/offer.jsx';
 
-const getPageScreen = (props) => {
-  const {offers} = props;
+const getPageScreen = (offers, cities) => {
   switch (location.pathname) {
     case `/`: return <Main
-      offers={props.offers}
-      cities={props.cities}
+      offers={offers}
+      cities={cities}
       onPlaceCardClick={() => {}}
     />;
     case `/offer`: return <Offer offer={offers[0]} />;
@@ -19,15 +18,16 @@ const getPageScreen = (props) => {
 };
 
 const App = (props) => {
+  const {offers, cities} = props;
   return (
     <div className="page">
       <Header />
-      {getPageScreen(props)}
+      {getPageScreen(offers, cities)}
     </div>
   );
 };
 
-getPageScreen.propTypes = {
+App.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     city: PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -41,7 +41,7 @@ getPageScreen.propTypes = {
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
-    rating: PropTypes.number,
+    rating: PropTypes.number.isRequired,
     isPremium: PropTypes.bool,
     location: PropTypes.shape({
       latitude: PropTypes.number.isRequired,

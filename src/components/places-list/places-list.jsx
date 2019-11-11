@@ -31,6 +31,7 @@ class PlacesList extends React.PureComponent {
       return (
         <PlaceItem
           key={id + title}
+          id={id}
           title={title}
           type={type}
           previewImage={previewImage}
@@ -58,11 +59,12 @@ class PlacesList extends React.PureComponent {
 
 PlacesList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
-    rating: PropTypes.number,
+    rating: PropTypes.number.isRequired,
     isPremium: PropTypes.bool,
   })).isRequired,
   onPlaceCardClick: PropTypes.func,

@@ -19,7 +19,7 @@ exports[`PlacesList rendered correctly 1`] = `
       className="cities__image-wrapper place-card__image-wrapper"
     >
       <a
-        href="#"
+        href="/offer"
         onClick={[MockFunction]}
       >
         <img
@@ -92,7 +92,7 @@ exports[`PlacesList rendered correctly 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer"
           onClick={[MockFunction]}
         >
           Beautiful &amp; luxurious apartment at great location
@@ -113,7 +113,7 @@ exports[`PlacesList rendered correctly 1`] = `
       className="cities__image-wrapper place-card__image-wrapper"
     >
       <a
-        href="#"
+        href="/offer"
         onClick={[MockFunction]}
       >
         <img
@@ -186,7 +186,7 @@ exports[`PlacesList rendered correctly 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer"
           onClick={[MockFunction]}
         >
           Wood and stone place
