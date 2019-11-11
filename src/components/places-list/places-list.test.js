@@ -7,6 +7,7 @@ it(`PlacesList rendered correctly`, () => {
     .create(<PlacesList
       offers={[
         {
+          id: 1,
           title: `Beautiful &amp; luxurious apartment at great location`,
           type: `apartment`,
           previewImage: `img/apartment-01.jpg`,
@@ -16,6 +17,7 @@ it(`PlacesList rendered correctly`, () => {
           isFavorite: false,
         },
         {
+          id: 2,
           title: `Wood and stone place`,
           type: `apartment`,
           previewImage: `img/room.jpg`,

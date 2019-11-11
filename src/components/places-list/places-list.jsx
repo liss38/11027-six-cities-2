@@ -59,7 +59,7 @@ class PlacesList extends React.PureComponent {
 
 PlacesList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number,
     title: PropTypes.string,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,

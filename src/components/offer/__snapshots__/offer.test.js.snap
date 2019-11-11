@@ -146,12 +146,15 @@ exports[`Offer component is rendered 1`] = `
           <li
             className="property__feature property__feature--bedrooms"
           >
-            3 Bedrooms
+            3
+             Bedrooms
           </li>
           <li
             className="property__feature property__feature--adults"
           >
-            Max 4 adults
+            Max 
+            4
+             adults
           </li>
         </ul>
         <div
@@ -224,7 +227,7 @@ exports[`Offer component is rendered 1`] = `
             className="property__host-user user"
           >
             <div
-              className="property__avatar-wrapper undefined user__avatar-wrapper"
+              className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper"
             >
               <img
                 alt="Host avatar"
@@ -238,6 +241,11 @@ exports[`Offer component is rendered 1`] = `
               className="property__user-name"
             >
               Angelina
+            </span>
+            <span
+              className="property__user-status"
+            >
+              Pro
             </span>
           </div>
           <div
@@ -276,17 +284,17 @@ exports[`Offer component is rendered 1`] = `
                   className="reviews__avatar-wrapper user__avatar-wrapper"
                 >
                   <img
-                    alt="Reviews avatar"
+                    alt="Alex"
                     className="reviews__avatar user__avatar"
                     height="54"
-                    src="img/avatar-max.jpg"
+                    src="img/avatar.svg"
                     width="54"
                   />
                 </div>
                 <span
                   className="reviews__user-name"
                 >
-                  Max
+                  Alex
                 </span>
               </div>
               <div
@@ -301,7 +309,7 @@ exports[`Offer component is rendered 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "94%",
+                          "width": "18%",
                         }
                       }
                     />
@@ -315,7 +323,66 @@ exports[`Offer component is rendered 1`] = `
                 <p
                   className="reviews__text"
                 >
-                  A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.
+                  Рейтинг. Оценка выводится в виде закрашенных звезд. Максимальное количество звёзд — 5. Оценка округляется до ближайшего целого. Например, оценка 3.1 округляется до 3-х. Оценка 4.5 округляется до 5.
+                </p>
+                <time
+                  className="reviews__time"
+                  dateTime="2019-04-24"
+                >
+                  April 2019
+                </time>
+              </div>
+            </li>
+            <li
+              className="reviews__item"
+            >
+              <div
+                className="reviews__user user"
+              >
+                <div
+                  className="reviews__avatar-wrapper user__avatar-wrapper"
+                >
+                  <img
+                    alt="John"
+                    className="reviews__avatar user__avatar"
+                    height="54"
+                    src="img/avatar.svg"
+                    width="54"
+                  />
+                </div>
+                <span
+                  className="reviews__user-name"
+                >
+                  John
+                </span>
+              </div>
+              <div
+                className="reviews__info"
+              >
+                <div
+                  className="reviews__rating rating"
+                >
+                  <div
+                    className="reviews__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <p
+                  className="reviews__text"
+                >
+                  Дата отзыва в формате: Месяц Год. Например: April 2019
                 </p>
                 <time
                   className="reviews__time"
