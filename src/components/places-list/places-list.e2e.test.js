@@ -8,13 +8,13 @@ it(`Value of 'activePlaceCard' in State is changed after hover`, () => {
   const placesList = mount(<PlacesList
     offers={[
       {
-        "title": `Beautiful &amp; luxurious apartment at great location`,
-        "type": `apartment`,
-        "preview_image": `img/apartment-01.jpg`,
-        "price": 50,
-        "rating": 1.3,
-        "is_premium": false,
-        "is_favorite": false,
+        title: `Beautiful &amp; luxurious apartment at great location`,
+        type: `apartment`,
+        previewImage: `img/apartment-01.jpg`,
+        price: 50,
+        rating: 1.3,
+        isPremium: false,
+        isFavorite: false,
       },
     ]}
     onPlaceCardClick={jest.fn()}

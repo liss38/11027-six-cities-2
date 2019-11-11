@@ -12,6 +12,7 @@ it(`Components App renders correctly`, () => {
     .create(<App
       offers={[
         {
+          id: 1,
           city: {
             name: `Amsterdam`,
             location: {
@@ -23,8 +24,9 @@ it(`Components App renders correctly`, () => {
           title: `Beautiful &amp; luxurious apartment at great location`,
           type: `apartment`,
           previewImage: `img/apartment-01.jpg`,
+          images: [`img/room.jpg`, `img/apartment-01.jpg`, `img/apartment-02.jpg`, `img/apartment-03.jpg`, `img/apartment-01.jpg`, `img/studio-01.jpg`],
           price: 50,
-          rating: 4.2,
+          rating: 4.5,
           isPremium: true,
           isFavorite: false,
           location: {
@@ -32,8 +34,19 @@ it(`Components App renders correctly`, () => {
             longitude: 4.85309666406198,
             zoom: 8,
           },
+          host: {
+            id: 3,
+            isSuper: true,
+            name: `Angelina`,
+            avatarUrl: `img/avatar-angelina.jpg`,
+          },
+          description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+          goods: [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+          maxAdults: 4,
+          bedrooms: 3,
         },
         {
+          id: 2,
           city: {
             name: `Amsterdam`,
             location: {
@@ -50,10 +63,20 @@ it(`Components App renders correctly`, () => {
           isPremium: false,
           isFavorite: false,
           location: {
-            latitude: 52.3909553943508,
+            latitude: 52.369553943508,
             longitude: 4.85309666406198,
             zoom: 8,
           },
+          host: {
+            id: 3,
+            isSuper: true,
+            name: `Angelina`,
+            avatarUrl: `img/avatar-angelina.jpg`,
+          },
+          description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+          goods: [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+          maxAdults: 4,
+          bedrooms: 3,
         },
       ]}
       cities={[

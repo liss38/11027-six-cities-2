@@ -18,6 +18,7 @@ exports[`Components App renders correctly 1`] = `
         >
           <a
             className="header__logo-link header__logo-link--active"
+            href="/"
           >
             <img
               alt="6 cities logo"
@@ -177,16 +178,24 @@ exports[`Components App renders correctly 1`] = `
               onMouseOver={[Function]}
             >
               <div
+                className="place-card__mark"
+              >
+                <span>
+                  Premium
+                </span>
+              </div>
+              <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
                 <a
-                  href="#"
+                  href="/offer"
                   onClick={[Function]}
                 >
                   <img
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    src="img/apartment-01.jpg"
                     width="260"
                   />
                 </a>
@@ -237,7 +246,7 @@ exports[`Components App renders correctly 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "84.00000000000001%",
+                          "width": "90%",
                         }
                       }
                     />
@@ -252,7 +261,7 @@ exports[`Components App renders correctly 1`] = `
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer"
                     onClick={[Function]}
                   >
                     Beautiful &amp; luxurious apartment at great location
@@ -273,13 +282,14 @@ exports[`Components App renders correctly 1`] = `
                 className="cities__image-wrapper place-card__image-wrapper"
               >
                 <a
-                  href="#"
+                  href="/offer"
                   onClick={[Function]}
                 >
                   <img
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    src="img/room.jpg"
                     width="260"
                   />
                 </a>
@@ -345,7 +355,7 @@ exports[`Components App renders correctly 1`] = `
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer"
                     onClick={[Function]}
                   >
                     Wood and stone place

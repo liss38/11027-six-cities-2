@@ -17,11 +17,21 @@ class PlacesList extends React.PureComponent {
     } = this.props;
 
     const mappedOffers = offers.map((offer) => {
-      const {id, title, type, preview_image: previewImage, price, rating, is_premium: isPremium, is_favorite: isFavorite} = offer;
+      const {
+        id,
+        title,
+        type,
+        previewImage,
+        price,
+        rating,
+        isPremium,
+        isFavorite,
+      } = offer;
 
       return (
         <PlaceItem
           key={id + title}
+          id={id}
           title={title}
           type={type}
           previewImage={previewImage}
@@ -49,11 +59,12 @@ class PlacesList extends React.PureComponent {
 
 PlacesList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]),
     previewImage: PropTypes.string,
     price: PropTypes.number,
-    rating: PropTypes.number,
+    rating: PropTypes.number.isRequired,
     isPremium: PropTypes.bool,
   })).isRequired,
   onPlaceCardClick: PropTypes.func,
