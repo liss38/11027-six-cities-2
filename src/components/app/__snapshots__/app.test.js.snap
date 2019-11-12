@@ -171,7 +171,7 @@ exports[`Components App renders correctly 1`] = `
             </ul>
           </form>
           <div
-            className="cities__places-list places__list tabs__content"
+            className="places__list cities__places-list tabs__content"
           >
             <article
               className="cities__place-card place-card"
@@ -189,7 +189,6 @@ exports[`Components App renders correctly 1`] = `
               >
                 <a
                   href="/offer"
-                  onClick={[Function]}
                 >
                   <img
                     alt="Place image"
@@ -262,7 +261,6 @@ exports[`Components App renders correctly 1`] = `
                 >
                   <a
                     href="/offer"
-                    onClick={[Function]}
                   >
                     Beautiful &amp; luxurious apartment at great location
                   </a>
@@ -283,7 +281,6 @@ exports[`Components App renders correctly 1`] = `
               >
                 <a
                   href="/offer"
-                  onClick={[Function]}
                 >
                   <img
                     alt="Place image"
@@ -356,7 +353,6 @@ exports[`Components App renders correctly 1`] = `
                 >
                   <a
                     href="/offer"
-                    onClick={[Function]}
                   >
                     Wood and stone place
                   </a>

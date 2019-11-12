@@ -27,7 +27,7 @@ it(`PlacesList rendered correctly`, () => {
           isFavorite: false,
         },
       ]}
-      onPlaceCardClick={jest.fn()}
+      styleMode={`main`}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();

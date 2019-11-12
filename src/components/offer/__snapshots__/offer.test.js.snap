@@ -11,65 +11,61 @@ exports[`Offer component is rendered 1`] = `
       className="property__gallery-container container"
     >
       <div
-        className="property__gallery-container container"
+        className="property__gallery"
       >
         <div
-          className="property__gallery"
+          className="property__image-wrapper"
         >
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/room.jpg"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/apartment-01.jpg"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/apartment-02.jpg"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/apartment-03.jpg"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/apartment-01.jpg"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="img/studio-01.jpg"
-            />
-          </div>
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/room.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/apartment-01.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/apartment-02.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/apartment-03.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/apartment-01.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="img/studio-01.jpg"
+          />
         </div>
       </div>
     </div>
@@ -258,6 +254,10 @@ exports[`Offer component is rendered 1`] = `
             </p>
           </div>
         </div>
+      </div>
+      <div
+        className="property__wrapper"
+      >
         <section
           className="property__reviews reviews"
         >
@@ -538,6 +538,7 @@ exports[`Offer component is rendered 1`] = `
     </div>
     <section
       className="property__map map"
+      id="map"
     />
   </section>
   <div
@@ -552,16 +553,17 @@ exports[`Offer component is rendered 1`] = `
         Other places in the neighbourhood
       </h2>
       <div
-        className="near-places__list places__list"
+        className="places__list near-places__list"
       >
         <article
           className="near-places__card place-card"
+          onMouseOver={[Function]}
         >
           <div
             className="near-places__image-wrapper place-card__image-wrapper"
           >
             <a
-              href="#"
+              href="/offer"
             >
               <img
                 alt="Place image"
@@ -584,7 +586,8 @@ exports[`Offer component is rendered 1`] = `
                 <b
                   className="place-card__price-value"
                 >
-                  €80
+                  €
+                  300
                 </b>
                 <span
                   className="place-card__price-text"
@@ -593,7 +596,7 @@ exports[`Offer component is rendered 1`] = `
                 </span>
               </div>
               <button
-                className="place-card__bookmark-button place-card__bookmark-button--active button"
+                className="place-card__bookmark-button button"
                 type="button"
               >
                 <svg
@@ -604,7 +607,7 @@ exports[`Offer component is rendered 1`] = `
                 <span
                   className="visually-hidden"
                 >
-                  In bookmarks
+                  To bookmarks
                 </span>
               </button>
             </div>
@@ -617,7 +620,7 @@ exports[`Offer component is rendered 1`] = `
                 <span
                   style={
                     Object {
-                      "width": "80%",
+                      "width": "26%",
                     }
                   }
                 />
@@ -632,7 +635,7 @@ exports[`Offer component is rendered 1`] = `
               className="place-card__name"
             >
               <a
-                href="#"
+                href="/offer"
               >
                 Wood and stone place
               </a>
@@ -640,18 +643,19 @@ exports[`Offer component is rendered 1`] = `
             <p
               className="place-card__type"
             >
-              Private room
+              apartment
             </p>
           </div>
         </article>
         <article
           className="near-places__card place-card"
+          onMouseOver={[Function]}
         >
           <div
             className="near-places__image-wrapper place-card__image-wrapper"
           >
             <a
-              href="#"
+              href="/offer"
             >
               <img
                 alt="Place image"
@@ -674,7 +678,8 @@ exports[`Offer component is rendered 1`] = `
                 <b
                   className="place-card__price-value"
                 >
-                  €132
+                  €
+                  100
                 </b>
                 <span
                   className="place-card__price-text"
@@ -707,7 +712,7 @@ exports[`Offer component is rendered 1`] = `
                 <span
                   style={
                     Object {
-                      "width": "80%",
+                      "width": "50%",
                     }
                   }
                 />
@@ -722,7 +727,7 @@ exports[`Offer component is rendered 1`] = `
               className="place-card__name"
             >
               <a
-                href="#"
+                href="/offer"
               >
                 Canal View Prinsengracht
               </a>
@@ -730,97 +735,7 @@ exports[`Offer component is rendered 1`] = `
             <p
               className="place-card__type"
             >
-              Apartment
-            </p>
-          </div>
-        </article>
-        <article
-          className="near-places__card place-card"
-        >
-          <div
-            className="near-places__image-wrapper place-card__image-wrapper"
-          >
-            <a
-              href="#"
-            >
-              <img
-                alt="Place image"
-                className="place-card__image"
-                height="200"
-                src="img/apartment-03.jpg"
-                width="260"
-              />
-            </a>
-          </div>
-          <div
-            className="place-card__info"
-          >
-            <div
-              className="place-card__price-wrapper"
-            >
-              <div
-                className="place-card__price"
-              >
-                <b
-                  className="place-card__price-value"
-                >
-                  €180
-                </b>
-                <span
-                  className="place-card__price-text"
-                >
-                  / night
-                </span>
-              </div>
-              <button
-                className="place-card__bookmark-button button"
-                type="button"
-              >
-                <svg
-                  className="place-card__bookmark-icon"
-                  height="19"
-                  width="18"
-                />
-                <span
-                  className="visually-hidden"
-                >
-                  To bookmarks
-                </span>
-              </button>
-            </div>
-            <div
-              className="place-card__rating rating"
-            >
-              <div
-                className="place-card__stars rating__stars"
-              >
-                <span
-                  style={
-                    Object {
-                      "width": "100%",
-                    }
-                  }
-                />
-                <span
-                  className="visually-hidden"
-                >
-                  Rating
-                </span>
-              </div>
-            </div>
-            <h2
-              className="place-card__name"
-            >
-              <a
-                href="#"
-              >
-                Nice, cozy, warm big bed apartment
-              </a>
-            </h2>
-            <p
-              className="place-card__type"
-            >
-              Apartment
+              apartment
             </p>
           </div>
         </article>

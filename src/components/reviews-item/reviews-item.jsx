@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ReviewItem = (props) => {
+const ReviewsItem = ({review}) => {
   const {
     name,
     avatarUrl,
     rating,
     date,
     description,
-  } = props;
+  } = review;
 
   return (
     <li className="reviews__item">
@@ -36,12 +36,14 @@ const ReviewItem = (props) => {
   );
 };
 
-ReviewItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  avatarUrl: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+ReviewsItem.propTypes = {
+  review: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    avatarUrl: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-export default ReviewItem;
+export default ReviewsItem;

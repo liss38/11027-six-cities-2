@@ -9,7 +9,6 @@ const Main = (props) => {
   const {
     offers,
     cities,
-    onPlaceCardClick,
   } = props;
 
   const locations = offers.map((offer) => [offer.location.latitude, offer.location.longitude]);
@@ -31,11 +30,14 @@ const Main = (props) => {
             <PlacesSorting />
             <PlacesList
               offers={offers}
-              onPlaceCardClick={onPlaceCardClick}
+              styleMode={`main`}
             />
           </section>
           <div className="cities__right-section">
-            <Map locations={locations}/>
+            <Map
+              locations={locations}
+              styleMode={`main`}
+            />
           </div>
         </div>
       </div>
@@ -68,7 +70,6 @@ Main.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
   })).isRequired,
-  onPlaceCardClick: PropTypes.func,
 };
 
 export default Main;

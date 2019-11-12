@@ -11,6 +11,7 @@ it(`Map component is rendered`, () => {
   const tree = renderer
     .create(<Map
       locations={[]}
+      styleMode={`main`}
     />)
     .toJSON();
 

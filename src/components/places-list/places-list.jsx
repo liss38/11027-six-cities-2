@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlaceItem from '../place-item/place-item.jsx';
+import PlacesItem from '../places-item/places-item.jsx';
 
 class PlacesList extends React.PureComponent {
   constructor(props) {
@@ -8,38 +8,28 @@ class PlacesList extends React.PureComponent {
     this.state = {
       activePlaceCard: null,
     };
+    this._styleModeMap = {
+      offer: `near-places__list`,
+      main: `cities__places-list tabs__content`,
+    };
   }
 
   render() {
     const {
       offers,
-      onPlaceCardClick,
+      styleMode,
     } = this.props;
 
+    const listStyleMode = this._styleModeMap[styleMode];
+
     const mappedOffers = offers.map((offer) => {
-      const {
-        id,
-        title,
-        type,
-        previewImage,
-        price,
-        rating,
-        isPremium,
-        isFavorite,
-      } = offer;
+      const {id, title} = offer;
 
       return (
-        <PlaceItem
+        <PlacesItem
           key={id + title}
-          id={id}
-          title={title}
-          type={type}
-          previewImage={previewImage}
-          price={price}
-          rating={rating}
-          isPremium={isPremium}
-          isFavorite={isFavorite}
-          onPlaceCardClick={onPlaceCardClick}
+          offer={offer}
+          styleMode={styleMode}
           onPlaceCardHover={(placeCard) => {
             this.setState(() => ({
               activePlaceCard: placeCard,
@@ -50,7 +40,7 @@ class PlacesList extends React.PureComponent {
     });
 
     return (
-      <div className="cities__places-list places__list tabs__content">
+      <div className={`places__list ${listStyleMode}`}>
         {mappedOffers}
       </div>
     );
@@ -67,7 +57,7 @@ PlacesList.propTypes = {
     rating: PropTypes.number.isRequired,
     isPremium: PropTypes.bool,
   })).isRequired,
-  onPlaceCardClick: PropTypes.func,
+  styleMode: PropTypes.string.isRequired,
 };
 
 export default PlacesList;

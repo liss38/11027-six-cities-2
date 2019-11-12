@@ -64,7 +64,6 @@ it(`Components Main renders correctly`, () => {
           name: `Tokyo`,
         },
       ]}
-      onPlaceCardClick={jest.fn()}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();

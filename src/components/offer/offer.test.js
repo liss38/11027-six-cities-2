@@ -3,6 +3,11 @@ import renderer from 'react-test-renderer';
 import Offer from './offer.jsx';
 
 it(`Offer component is rendered`, () => {
+  const div = global.document.createElement(`div`);
+
+  div.setAttribute(`id`, `map`);
+  global.document.body.appendChild(div);
+
   const tree = renderer
     .create(<Offer
       offer={{
@@ -55,6 +60,38 @@ it(`Offer component is rendered`, () => {
           rating: 5,
           date: `April 2019`,
           description: `Дата отзыва в формате: Месяц Год. Например: April 2019`,
+        },
+      ]}
+      relevantOffers={[
+        {
+          id: 2,
+          title: `Wood and stone place`,
+          type: `apartment`,
+          previewImage: `img/room.jpg`,
+          price: 300,
+          rating: 1.3,
+          isPremium: false,
+          isFavorite: false,
+          location: {
+            latitude: 52.369553943508,
+            longitude: 4.85309666406198,
+            zoom: 8,
+          },
+        },
+        {
+          id: 3,
+          title: `Canal View Prinsengracht`,
+          type: `apartment`,
+          previewImage: `img/apartment-02.jpg`,
+          price: 100,
+          rating: 2.5,
+          isPremium: false,
+          isFavorite: false,
+          location: {
+            latitude: 52.3909553943508,
+            longitude: 4.929309666406198,
+            zoom: 8,
+          },
         },
       ]}
     />)

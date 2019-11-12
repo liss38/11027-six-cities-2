@@ -2,7 +2,7 @@
 
 exports[`PlacesList rendered correctly 1`] = `
 <div
-  className="cities__places-list places__list tabs__content"
+  className="places__list cities__places-list tabs__content"
 >
   <article
     className="cities__place-card place-card"
@@ -20,7 +20,6 @@ exports[`PlacesList rendered correctly 1`] = `
     >
       <a
         href="/offer"
-        onClick={[MockFunction]}
       >
         <img
           alt="Place image"
@@ -93,7 +92,6 @@ exports[`PlacesList rendered correctly 1`] = `
       >
         <a
           href="/offer"
-          onClick={[MockFunction]}
         >
           Beautiful &amp; luxurious apartment at great location
         </a>
@@ -114,7 +112,6 @@ exports[`PlacesList rendered correctly 1`] = `
     >
       <a
         href="/offer"
-        onClick={[MockFunction]}
       >
         <img
           alt="Place image"
@@ -187,7 +184,6 @@ exports[`PlacesList rendered correctly 1`] = `
       >
         <a
           href="/offer"
-          onClick={[MockFunction]}
         >
           Wood and stone place
         </a>

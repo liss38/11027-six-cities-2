@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 import leaflet from 'leaflet';
 
 class Map extends PureComponent {
+  constructor(props) {
+    super(props);
+
+    this._styleModeMap = {
+      offer: `property__map map`,
+      main: `cities__map map`,
+    };
+  }
+
   componentDidMount() {
     const {locations} = this.props;
     const city = [52.38333, 4.9];
@@ -30,14 +39,18 @@ class Map extends PureComponent {
   }
 
   render() {
+    const {styleMode} = this.props;
+    const mapStyleMode = this._styleModeMap[styleMode];
+
     return (
-      <section id="map" className="cities__map map"></section>
+      <section id="map" className={mapStyleMode}></section>
     );
   }
 }
 
 Map.propTypes = {
   locations: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+  styleMode: PropTypes.string.isRequired,
 };
 
 export default Map;

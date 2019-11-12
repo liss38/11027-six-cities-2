@@ -5,15 +5,18 @@ import Main from '../main/main.jsx';
 import Offer from '../offer/offer.jsx';
 
 const getPageScreen = (offers, cities, reviews) => {
+  const currentOffer = offers[0];
+  const relevantOffers = offers.filter((offer) => offer.id !== currentOffer.id);
+
   switch (location.pathname) {
     case `/`: return <Main
       offers={offers}
       cities={cities}
-      onPlaceCardClick={() => {}}
     />;
     case `/offer`: return <Offer
-      offer={offers[0]}
+      offer={currentOffer}
       reviews={reviews}
+      relevantOffers={relevantOffers}
     />;
   }
 

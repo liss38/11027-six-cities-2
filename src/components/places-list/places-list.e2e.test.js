@@ -17,7 +17,7 @@ it(`Value of 'activePlaceCard' in State is changed after hover`, () => {
         isFavorite: false,
       },
     ]}
-    onPlaceCardClick={jest.fn()}
+    styleMode={`main`}
   />);
 
   const placeItemWrapper = placesList.find(`.place-card`).first();
