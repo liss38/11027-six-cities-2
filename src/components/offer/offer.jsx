@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import OfferGallery from '../offer-gallery/offer-gallery.jsx';
 import OfferDescription from '../offer-description/offer-description.jsx';
 import ReviewsList from '../reviews-list/reviews-list.jsx';
-import Map from '../map/map.jsx';
+import GeoMap from '../geo-map/geo-map.jsx';
 import PlacesList from '../places-list/places-list.jsx';
 
 const Offer = ({offer, reviews, relevantOffers}) => {
-  const {images} = offer;
+  const {images, city} = offer;
 
   const relevantLocations = relevantOffers.map((relevantOffer) => [relevantOffer.location.latitude, relevantOffer.location.longitude]);
 
@@ -29,7 +29,8 @@ const Offer = ({offer, reviews, relevantOffers}) => {
             />
           </div>
         </div>
-        <Map
+        <GeoMap
+          city={city}
           locations={relevantLocations}
           styleMode={`offer`}
         />

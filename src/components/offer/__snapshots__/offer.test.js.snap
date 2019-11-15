@@ -268,7 +268,7 @@ exports[`Offer component is rendered 1`] = `
             <span
               className="reviews__amount"
             >
-              1
+              2
             </span>
           </h2>
           <ul

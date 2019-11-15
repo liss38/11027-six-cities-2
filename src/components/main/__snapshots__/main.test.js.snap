@@ -22,11 +22,12 @@ exports[`Components Main renders correctly 1`] = `
           className="locations__item"
         >
           <a
-            className="locations__item-link tabs__item "
+            className="locations__item-link tabs__item tabs__item--active"
             href="#"
+            onClick={[Function]}
           >
             <span>
-              New-York
+              Amsterdam
             </span>
           </a>
         </li>
@@ -36,9 +37,10 @@ exports[`Components Main renders correctly 1`] = `
           <a
             className="locations__item-link tabs__item "
             href="#"
+            onClick={[Function]}
           >
             <span>
-              Tokyo
+              Cologne
             </span>
           </a>
         </li>
@@ -62,7 +64,9 @@ exports[`Components Main renders correctly 1`] = `
         <b
           className="places__found"
         >
-          312 places to stay in Amsterdam
+          2
+           places to stay in 
+          Amsterdam
         </b>
         <form
           action="#"

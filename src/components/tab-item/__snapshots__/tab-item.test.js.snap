@@ -7,9 +7,10 @@ exports[`Active 'TabItem' rendered correctly 1`] = `
   <a
     className="locations__item-link tabs__item tabs__item--active"
     href="#"
+    onClick={[Function]}
   >
     <span>
-      Moscow
+      Brussels
     </span>
   </a>
 </li>
@@ -22,9 +23,10 @@ exports[`Not active 'TabItem' rendered correctly 1`] = `
   <a
     className="locations__item-link tabs__item "
     href="#"
+    onClick={[Function]}
   >
     <span>
-      Vladivostok
+      Hamburg
     </span>
   </a>
 </li>

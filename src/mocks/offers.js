@@ -169,6 +169,40 @@ const offers = [
     maxAdults: 4,
     bedrooms: 3,
   },
+  {
+    id: 6,
+    city: {
+      name: `Cologne`,
+      location: {
+        latitude: 52.370216,
+        longitude: 4.895168,
+        zoom: 10,
+      }
+    },
+    title: `Wood and stone place`,
+    type: `apartment`,
+    previewImage: `img/room.jpg`,
+    images: [`img/room.jpg`, `img/apartment-01.jpg`, `img/apartment-02.jpg`, `img/apartment-03.jpg`, `img/apartment-01.jpg`, `img/studio-01.jpg`],
+    price: 1080,
+    rating: 4.3,
+    isPremium: false,
+    isFavorite: false,
+    location: {
+      latitude: 50.931548,
+      longitude: 6.950483,
+      zoom: 8,
+    },
+    host: {
+      id: 3,
+      isSuper: false,
+      name: `Angelina`,
+      avatarUrl: `img/avatar-angelina.jpg`,
+    },
+    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    goods: [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    maxAdults: 4,
+    bedrooms: 3,
+  },
 ];
 
 export default offers;
